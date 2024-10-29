@@ -1,3 +1,9 @@
+:root {
+    --primary: #ffffff;
+    --secondary: #212429;
+    --accent: #989899;
+}
+
 p {
     color: brown;
 
@@ -10,7 +16,7 @@ p {
 .content-box {
     width: 200px ;
     height: 200px;
-    border: 20px solid black;
+    border: 20px solid var(--secondary);
     padding: 20px;
     background-color: indigo;
 
@@ -23,7 +29,18 @@ body {
 }
 
 h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 32px;
 
+}
+
+button {
+    background-color:var(--secondary);
+    color: var(--primary);
+    border-radius: 10px;
+    border: none;
+    padding: 16px;
+}
+button:hover {
+    background-color:var(--accent);
 }
