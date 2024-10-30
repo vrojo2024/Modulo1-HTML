@@ -47,8 +47,9 @@ button:hover {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
+    /*flex-wrap: wrap;
+    flex-direction: row; "es lo mismo colocar estas dos, que colocar flex flow indicando row y wrap"*/
     background-color:var(--primary));
     flex-direction: row;
     }
