@@ -46,19 +46,66 @@ button:hover {
 }
 
 .container {
+    width: 1280px;
+    height: 800 px;
     display: flex;
     flex-flow: row wrap;
     /*flex-wrap: wrap;
     flex-direction: row; "es lo mismo colocar estas dos, que colocar flex flow indicando row y wrap"*/
+    justify-content: center;
+    align-items: center;
     background-color:var(--primary));
     flex-direction: row;
+    border: 16px;
+    padding: 32px
+
+
+
     }
-    .box {
+
+
+    /*.box {
     background-color:var(--secondary);
     color: var(--primary);
     font-size: 24px;
     text-align: center;
+    padding: 32px;
+    border: 16px;
+    margin: 8px;
+    width: px;
+    height: ;
+    }*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*sería lo mismo escribir: repeat (3, 1fr)*/
+
+}
+    .grid-item {
+        background-color: var(--primary);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+        }
+
+.container1 {
+    width: 100%;
+    display: flex ;
+}           
+.element {
+    flex: 1;
     padding: 20px;
-    margin: 20px;
-    width: 50px;
-    }
+}
+
+.container3 {
+    display:grid;
+    gap: 1rem;
+    grid-auto-rows: 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: var(--primary);
+}
