@@ -10,17 +10,12 @@
 html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del navegador para que se escale en proporción*/
 
 
-
 :root {
     --primary: #ffffff;
     --secondary: #212429;
     --accent: #989899;
 }
 
-p {
-    color: brown;
-
-}
 
 /**{
     box-sizing: content-box;
@@ -37,17 +32,14 @@ p {
 
 body {
     font-size: 16px;
-  
-
+    font-family:'Myfont', sans-serif;
 }
 
 h1{
     font-size: 32px;
-    font-family:'Myfont';
+    font-family:
+ }
 
-      }
-
-}
 
 button {
     background-color:var(--secondary);
