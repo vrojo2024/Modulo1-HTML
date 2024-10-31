@@ -1,3 +1,16 @@
+
+@font-face {
+    font-family: 'Myfont';
+    src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'), 
+    url('assets\fonts\montserratalternates-bold-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;  
+}
+
+html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del navegador para que se escale en proporción*/
+
+
+
 :root {
     --primary: #ffffff;
     --secondary: #212429;
@@ -9,7 +22,7 @@ p {
 
 }
 
-*{
+/**{
     box-sizing: content-box;
 }
 
@@ -20,17 +33,19 @@ p {
     padding: 20px;
     background-color: indigo;
 
-}
+}*/
 
 body {
-    font-family: sans-serif;
     font-size: 16px;
+  
 
 }
 
 h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 32px;
+    font-family:'Myfont';
+
+      }
 
 }
 
