@@ -32,7 +32,7 @@ html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del
 
 body {
     font-size: 16px;
-    font-family:'Myfont', sans-serif;
+    font-family:
 }
 
 h1{
@@ -104,10 +104,16 @@ button:hover {
 }
 
 .container3 {
+    
     display:grid;
     gap: 1rem;
     grid-auto-rows: 20rem;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    <img
+    src="
+    alt="una descripción de la imagen"
+    title="título de la imagen"
+/>
 }
 .box {
     display: flex;
