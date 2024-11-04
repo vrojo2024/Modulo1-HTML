@@ -1,5 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 8px;
+    padding: 0;
+    @font-face {
+        ffont-family: 'Myfont';
+        src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'); 
+        url('assets\fonts\montserratalternates-bold-webfont.woff2') format('.woff2');
+        font-weight: normal;
+        font-style: normal;  
+    }
+    :root {
+        --primary: #ffffff;
+        --secondary: #212429;
+        --accent: #989899;
+    }
+}
 
-@font-face {
+/*body {
+    font-family:'Myfont';
+    color: var(--secondary)
+}*/
+
+.container3 {
+    display:inline-flexbox;
+    flex-flow:row wrap;
+    gap: 3rem;
+    grid-auto-rows:rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.footer {
+    background-color:var(--secondary);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+header {
+    background-color:var(--primary);
+    padding: 1rem;
+    color: var(--secondary);
+  }
+
+  footer {
+    background-color:var(--secondary);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+   
+  header h1 {
+    display:flex;
+  }
+   
+  header nav ul {
+    list-style: none;
+    display: inline;
+    float: right;
+  }
+   
+  header nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+   
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+   
+  main {
+    padding: 20px;
+  }
+   
+  .course-list h2 {
+    margin-bottom: 1rem;
+  }
+   
+  .course-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+   
+  .course-item h3 {
+    margin-bottom: 0.5rem;
+  }
+   
+  .course-item p {
+    margin-bottom: 0.5rem;
+  }
+   
+  button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   
+  button:hover {
+    background-color: #005f56;
+  }
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+/**@font-face {
     font-family: 'Myfont';
     src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'), 
     url('assets\fonts\montserratalternates-bold-webfont.woff2') format('woff2');
@@ -10,7 +129,7 @@
 html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del navegador para que se escale en proporción*/
 
 
-:root {
+/*:root {
     --primary: #ffffff;
     --secondary: #212429;
     --accent: #989899;
@@ -30,9 +149,9 @@ html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del
 
 }*/
 
-body {
+/*body {
     font-size: 16px;
-    font-family:
+    font-family:'Myfont', sans-serif;
 }
 
 h1{
@@ -82,12 +201,12 @@ button:hover {
     width: px;
     height: ;
     }*/
-.grid-container {
+/*.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /*sería lo mismo escribir: repeat (3, 1fr)*/
 
-}
-    .grid-item {
+
+    /*.grid-item {
         background-color: var(--primary);
         padding: 20px;
         font-size: 30px;
@@ -104,21 +223,14 @@ button:hover {
 }
 
 .container3 {
-    
     display:grid;
-    gap: 1rem;
-    grid-auto-rows: 20rem;
+    gap: 3rem;
+    grid-auto-rows:rem;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    <img
-    src="
-    alt="una descripción de la imagen"
-    title="título de la imagen"
-/>
 }
 .box {
     display: flex;
-    align-items: center;
+    align-items: column;
     justify-content: center;
-    background-color: var(--secondary);
-    color: var(--primary);
-}
+    
+}*/
