@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="e">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,13 @@
     <!--<script></script> Aquí agregaríamos codigo java script si queremos hacer que sea una web dinámica-->
 </head>
 <body>
-    <div>
+    <div class="fixed-header">
+        <style>
+            span {
+                margin-right: 64px;
+            }
+           
+        </style>
         <span id="inicio"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M3 12H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -16,7 +22,7 @@
             </svg></span>
         <span>MODA MUJER</span>
         <span>MODA HOMBRE</span>
-        <Span>NUEVA COLECCION</Span>
+        <span>NUEVA COLECCION</Span>
         <span>COLECCIONES ESPECIALES</span>    
         <span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,43 +41,66 @@
         </span>
     </div>
     <header>
-        <h1>NUEVAS COLECCIONES</h1>
+        <div class="content"></div>
+            <h1>NUEVAS COLECCIONES</h1>
     </header>
     <div class="container3">
-        <div class="box"><img
-            src="/assets/imagenes/image-1.jpg"
-            alt="Joven rubio con camisa manga larga y botones"
-            title="título de la imagen"                
-        /></div>
-        <div class="box"><img
-            src="/assets/imagenes/image-2.jpg"
-            alt="una descripción de la imagen"
-            title="título de la imagen"
-        /></div>
-        <div class="box"><img
-            src="/assets/imagenes/image-3.jpg"
-            alt="una descripción de la imagen"
-            title="título de la imagen"
-        /></div>
-        <div class="box"><img
-            src="/assets/imagenes/image-4.jpg"
-            alt="una descripción de la imagen"
-            title="título de la imagen"
-            /></div>
-        <div class="box"><img
-            src="/assets/imagenes/image-5.jpg"
-            alt="una descripción de la imagen"
-            title="título de la imagen"
-        /></div>
-        <div class="box"><img
-            src="/assets/imagenes/image-6.jpg"
-            alt="una descripción de la imagen"
-            title="título de la imagen"
-        /></div>
-    </div>     
+        <div class="box">
+            <img src="/assets/imagenes/image-1.jpg" alt="Joven castaño con camisa manga larga y botones" title="Camisa blanca con botones"/>  
+            <div class="Info-producto">
+                <p class="descripcion">Camisa</p>
+                <p class="precio">25.00 €</p>
+            </div> 
+        </div>
+        <div class="box">
+            <img src="/assets/imagenes/image-2.jpg" alt="Joven castaño oscuro con camiseta blanca con logo" title="Camiseta blanca con logo"/>
+            <div class="Info-producto">
+                <p class="descripcion">Camisa</p>
+                <p class="precio">22.99 €</p>
+            </div>    
+        </div>
+        <div class="box">
+            <img src="/assets/imagenes/image-3.jpg" alt="Joven rubia con vestido verde sin mangas" title="Vestido verde sin mangas"/>
+                <div class="Info-producto">
+                    <p class="descripcion">Vestido</p>
+                    <p class="precio">34.99 €</p>
+                </div>
+        </div>
+        <div class="box">
+            <img src="/assets/imagenes/image-4.jpg" alt="Joven Castaña con vaqueros blancos" title="Vaqueros Blancos"/>
+                <div class="Info-producto">
+                    <p class="descripcion">Vaqueros</p>
+                    <p class="precio">79.99 €</p>
+                </div>
+        </div>
+        <div class="box">
+            <img src="/assets/imagenes/image-5.jpg" alt="una descripción de la imagen" title="título de la imagen"/>
+                <div class="Info-producto">
+                    <p class="descripcion">Polo</p>
+                    <p class="precio">44.95 €</p>
+                </div>
+        </div>
+        <div class="box">
+            <img src="/assets/imagenes/image-6.jpg" alt="una descripción de la imagen" title="título de la imagen"/>
+                <div class="Info-producto">
+                    <p class="descripcion">Camisa</p>
+                    <p class="precio">44.99 €</p>
+                </div>
+         </div> 
+     </div>         
     <footer>
         <div class="container4">
-            <p>Aqui colocare los datos de contacto</p>
+            <img src="/assets/imagenes/icon-truck.svg">
+            <p>Entrega</p>
+            <p>Devoluciones y cambios</p>
+
+        <div class="container5">
+            <img src="/assets/imagenes/icon-phone.svg">
+            <p>+375 (29) 749-18-23</p>
+
+        <div class="container6">
+            <img src="/assets/imagenes/icon-mail.svg">
+            <p>shop@omix.com</p>
         </div>
     </footer>
 </body>

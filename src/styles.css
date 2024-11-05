@@ -1,236 +1,143 @@
-* {
-    box-sizing: border-box;
-    margin: 8px;
+* { box-sizing: border-box;
+    margin: 0;
     padding: 0;
-    @font-face {
-        ffont-family: 'Myfont';
+    
+    /*@font-face {
+        font-family: 'Myfont';
         src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'); 
         url('assets\fonts\montserratalternates-bold-webfont.woff2') format('.woff2');
         font-weight: normal;
-        font-style: normal;  
+        font-style: normal;*/
     }
+    /*Aqui voy a definir la paleta de colores que voy a utilizar en la pagina*/
     :root {
         --primary: #ffffff;
         --secondary: #212429;
         --accent: #989899;
     }
-}
+
 
 /*body {
     font-family:'Myfont';
     color: var(--secondary)
 }*/
 
-.container3 {
-    display:inline-flexbox;
-    flex-flow:row wrap;
-    gap: 3rem;
-    grid-auto-rows:rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-}
-
-.footer {
-    background-color:var(--secondary);
+/*Con esto dejo fija la barra de navegación*/
+.fixed-header {
+    font
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
+    padding: 16px;
+    background-color:var(--primary);
 
-header {
+}
+/* Estilo del contenido */
+.content {
+  background-color:var(--primary);
+  padding: 64px; /* Espacio suficiente para que el contenido no quede oculto por el header fijo */
+} 
+.inicio {
+margin-left: 16px;;
+}  
+/*Contenedor de las imagenes*/  
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 64px;/*espacio entre las cajas*/
+    justify-content: center;/*centra las imagenes en la pagina*/
+    padding: 20px;
+}
+  /*Estilo para cada caja de imagen*/
+  .box {
+    background-color:var(--primary); /*Fondo blanco para cada caja*/
+    /*border: 1px solid #ddd; /*he puesto un borde sutil para poder ubicar bien las imagenes */
+    border-radius: 8px; /*Bordes redondeados*/
+    width: 300px; /* Ancho fijo para las imágenes*/
+    text-align:center; /*Para centrar el contenido dentro de cada caja*/
+    padding: 10px;
+  }
+  /* Estilo de las imágenes */
+  .box img {
+    width: 100%; /*Para que la imagen ocupe todo el ancho del contenedor*/
+    height: auto; /*Mantiene la proporción de la imagen*/
+    border-radius: 16px; /*Bordes redondeados en las imágenes*/
+  }
+  /* Estilo para el texto del producto (título y precio) */
+  .info-producto {
+    font-family: 'Myfont', sans-serif;
+    text-align: center;
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+  }
+  /* Estilo para el precio del producto */
+  .info-producto .precio {
+    font-family: 'Myfont', sans-serif;
+    font-size: 16px;
+    color: var(--secondary);/* Color rojo para el precio */
+    font-weight: bold
+  }
+  header {
+    display: flex;
     background-color:var(--primary);
     padding: 1rem;
-    color: var(--secondary);
   }
-
-  footer {
-    background-color:var(--secondary);
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-   
   header h1 {
     display:flex;
+    margin-left: 128px;
+    font-family: "Myfont", sans-serif;
   }
-   
-  header nav ul {
-    list-style: none;
-    display: inline;
-    float: right;
-  }
-   
-  header nav ul li {
-    display: inline;
-    margin-left: 20px;
-  }
-   
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-   
-  main {
-    padding: 20px;
-  }
-   
-  .course-list h2 {
-    margin-bottom: 1rem;
-  }
-   
-  .course-item {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-  }
-   
-  .course-item h3 {
-    margin-bottom: 0.5rem;
-  }
-   
-  .course-item p {
-    margin-bottom: 0.5rem;
-  }
-   
-  button {
-    background-color: #00796b;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-   
-  button:hover {
-    background-color: #005f56;
-  }
-   
-  
-
-
-
-
-
-
-
-
-
-
-
-/**@font-face {
-    font-family: 'Myfont';
-    src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'), 
-    url('assets\fonts\montserratalternates-bold-webfont.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;  
-}
-
-html {font-size: 100%;} /*16PX truco para cuando el usuario modifica el zoom del navegador para que se escale en proporción*/
-
-
-/*:root {
-    --primary: #ffffff;
-    --secondary: #212429;
-    --accent: #989899;
-}
-
-
-/**{
-    box-sizing: content-box;
-}
-
-.content-box {
-    width: 200px ;
-    height: 200px;
-    border: 20px solid var(--secondary);
-    padding: 20px;
-    background-color: indigo;
-
-}*/
-
-/*body {
-    font-size: 16px;
-    font-family:'Myfont', sans-serif;
-}
-
-h1{
-    font-size: 32px;
-    font-family:
- }
-
-
-button {
-    background-color:var(--secondary);
-    color: var(--primary);
-    border-radius: 10px;
-    border: none;
-    padding: 16px;
-}
-button:hover {
-    background-color:var(--accent);
-}
-
-.container {
-    width: 1280px;
-    height: 800 px;
+  /*Contenedor principal del footer*/
+  footer {
     display: flex;
-    flex-flow: row wrap;
-    /*flex-wrap: wrap;
-    flex-direction: row; "es lo mismo colocar estas dos, que colocar flex flow indicando row y wrap"*/
-    justify-content: center;
-    align-items: center;
-    background-color:var(--primary));
-    flex-direction: row;
-    border: 16px;
-    padding: 32px
-
-
-
-    }
-
-
-    /*.box {
-    background-color:var(--secondary);
-    color: var(--primary);
-    font-size: 24px;
-    text-align: center;
-    padding: 32px;
-    border: 16px;
-    margin: 8px;
-    width: px;
-    height: ;
-    }*/
-/*.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /*sería lo mismo escribir: repeat (3, 1fr)*/
-
-
-    /*.grid-item {
-        background-color: var(--primary);
-        padding: 20px;
-        font-size: 30px;
-        text-align: center;
-        }
-
-.container1 {
+    justify-content: center;/*Centro los contenedores en el footer*/
+    background-color:#212429; /*color de fondo del footer*/
+    color: #ffffff; /*color de las letras del footer*/
+    text-align:left; /*centro los elementos del footer*/
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex ;
-}           
-.element {
-    flex: 1;
-    padding: 20px;
+    text-align: left;
+    padding: 16px;
+    background-color:var(--secondary));
+  }
+  /*Estilo de los contenedores internos de los iconos y texto*/
+  .container4, .container5, .container6 {
+   margin-bottom: 20px; /*Espacio entre los botones*/
+  
+  }
+  /*Estilo del círculo blanco alrededor del icono*/
+.Circulo-blanco {
+  background-color:var(--primary); /*Fondo blanco*/
+  border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
+  display: inline-block; /*Para que los iconos se alineen en línea*/
+  width: 64px; /*Tamaño del ancho del circulo*/
+  height: 64px; /*Tamaño del alto del círculo*/
+  margin-bottom: 16px; /*Espacio entre el círculo y el texto*/
+  text-align: center; /*Centra el icono dentro del círculo*/
+ 
+}
+  .circulo-blanco img {
+    width: 24px; /*Tamaño del  
 }
 
-.container3 {
-    display:grid;
+
+
+
+
+
+
+
+
+
+ .container4, .container5, .container6 {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction:row;
     gap: 3rem;
     grid-auto-rows:rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-}
-.box {
-    display: flex;
-    align-items: column;
-    justify-content: center;
-    
-}*/
+    align-items: flex-end;
+  }*/
