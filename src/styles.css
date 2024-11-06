@@ -9,7 +9,7 @@
         font-weight: normal;
         font-style: normal;*/
     }
-    /*Aqui voy a definir la paleta de colores que voy a utilizar en la pagina*/
+    /*Aqui voy a definir la paleta de colores que voy a utilizar en la pagina, todas las variables que pongamos aqui estaran disponibles a nivel global*/
     :root {
         --primary: #ffffff;
         --secondary: #212429;
@@ -17,14 +17,13 @@
     }
 
 
-/*body {
-    font-family:'Myfont';
+body {
+    font-family:'Myfont' sans-serif;
     color: var(--secondary)
-}*/
+}
 
 /*Con esto dejo fija la barra de navegación*/
 .fixed-header {
-    font
     position:fixed;
     top: 0;
     left: 0;
@@ -33,6 +32,19 @@
     padding: 16px;
     background-color:var(--primary);
 
+}
+/* Estilo para los elementos dentro de .fixed-header */
+.fixed-header span {
+  cursor: pointer;  /*Cambia el cursor al pasar sobre los elementos*/
+  transition: all 0.3s ease;  /*Transición suave para el hover*/
+  padding: 10px;
+}
+
+/* Efecto hover cuando el cursor pasa sobre los <span> dentro de .fixed-header */
+.fixed-header span:hover {
+  background-color:var(--accent);  /* Fondo naranja al hacer hover */
+  color: white;  /* Texto blanco */
+  transform: scale(1.1);  /* Aumenta el tamaño ligeramente */
 }
 /* Estilo del contenido */
 .content {
@@ -51,7 +63,7 @@ margin-left: 16px;;
     justify-content: center;/*centra las imagenes en la pagina*/
     padding: 20px;
 }
-  /*Estilo para cada caja de imagen*/
+  /*Estilo para cada caja de iconos*/
   .box {
     background-color:var(--primary); /*Fondo blanco para cada caja*/
     /*border: 1px solid #ddd; /*he puesto un borde sutil para poder ubicar bien las imagenes */
@@ -64,8 +76,10 @@ margin-left: 16px;;
   .box img {
     width: 100%; /*Para que la imagen ocupe todo el ancho del contenedor*/
     height: auto; /*Mantiene la proporción de la imagen*/
-    border-radius: 16px; /*Bordes redondeados en las imágenes*/
+    border-radius: px; /*Bordes redondeados en las imágenes*/
   }
+
+
   /* Estilo para el texto del producto (título y precio) */
   .info-producto {
     font-family: 'Myfont', sans-serif;
@@ -86,58 +100,44 @@ margin-left: 16px;;
   }
   header h1 {
     display:flex;
-    margin-left: 128px;
+    margin-left: 64px;
     font-family: "Myfont", sans-serif;
   }
-  /*Contenedor principal del footer*/
+  /*Contenedor principal del footer y alineación de los elementos en horizontal*/
   footer {
     display: flex;
+    flex-wrap: wrap;/*Asegura que si no hay suficiente espacio, se ajusten a la siguiente fila*/
     justify-content: center;/*Centro los contenedores en el footer*/
-    background-color:#212429; /*color de fondo del footer*/
-    color: #ffffff; /*color de las letras del footer*/
-    text-align:left; /*centro los elementos del footer*/
-    top: 0;
-    left: 0;
-    width: 100%;
+    background-color:var(--secondary); /*color de fondo del footer*/
+    gap: 40px; /*Espaciado entre los contenedores*/
+    color:var(--primary); /*color de las letras del footer*/
     text-align: left;
     padding: 16px;
-    background-color:var(--secondary));
-  }
-  /*Estilo de los contenedores internos de los iconos y texto*/
-  .container4, .container5, .container6 {
-   margin-bottom: 20px; /*Espacio entre los botones*/
+    background-color:var(--secondary);
   
   }
+
+  /*Estilo de los contenedores internos de los iconos y texto*/
+  .container4, .container5, .container6 {
+   margin-bottom: 32px; /*Espacio entre los botones*/
+   background-color: var(--secondary);
+   display: flex;
+   justify-content: flex-start;
+   flex-direction:row;
+   gap: 1rem;
+   align-items:first baseline;
+  }
+  
+  
   /*Estilo del círculo blanco alrededor del icono*/
-.Circulo-blanco {
+  .Circulo-blanco {
   background-color:var(--primary); /*Fondo blanco*/
   border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
   display: inline-block; /*Para que los iconos se alineen en línea*/
   width: 64px; /*Tamaño del ancho del circulo*/
   height: 64px; /*Tamaño del alto del círculo*/
-  margin-bottom: 16px; /*Espacio entre el círculo y el texto*/
-  text-align: center; /*Centra el icono dentro del círculo*/
- 
 }
-  .circulo-blanco img {
-    width: 24px; /*Tamaño del  
+.Circulo-blanco:hover {
+  background-color: var(--accent);
+  
 }
-
-
-
-
-
-
-
-
-
-
- .container4, .container5, .container6 {
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: flex-start;
-    flex-direction:row;
-    gap: 3rem;
-    grid-auto-rows:rem;
-    align-items: flex-end;
-  }*/

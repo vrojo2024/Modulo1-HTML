@@ -12,8 +12,8 @@
         <style>
             span {
                 margin-right: 64px;
-            }
-           
+            } 
+                     
         </style>
         <span id="inicio"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 18H21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,8 +45,15 @@
             <h1>NUEVAS COLECCIONES</h1>
     </header>
     <div class="container3">
+        
         <div class="box">
-            <img src="/assets/imagenes/image-1.jpg" alt="Joven castaño con camisa manga larga y botones" title="Camisa blanca con botones"/>  
+            <img src="/assets/imagenes/image-1.jpg" alt="Joven castaño con camisa manga larga y botones" title="Camisa blanca con botones"/>
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                transition: all 0.5s ease;  /*Transición suave para el hover*/
+                } 
+            </style>    
             <div class="Info-producto">
                 <p class="descripcion">Camisa</p>
                 <p class="precio">25.00 €</p>
@@ -54,6 +61,11 @@
         </div>
         <div class="box">
             <img src="/assets/imagenes/image-2.jpg" alt="Joven castaño oscuro con camiseta blanca con logo" title="Camiseta blanca con logo"/>
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                } 
+            </style>
             <div class="Info-producto">
                 <p class="descripcion">Camisa</p>
                 <p class="precio">22.99 €</p>
@@ -61,45 +73,73 @@
         </div>
         <div class="box">
             <img src="/assets/imagenes/image-3.jpg" alt="Joven rubia con vestido verde sin mangas" title="Vestido verde sin mangas"/>
-                <div class="Info-producto">
-                    <p class="descripcion">Vestido</p>
-                    <p class="precio">34.99 €</p>
-                </div>
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                } 
+            </style>
+            <div class="Info-producto">
+                <p class="descripcion">Vestido</p>
+                <p class="precio">34.99 €</p>
+            </div>
         </div>
         <div class="box">
             <img src="/assets/imagenes/image-4.jpg" alt="Joven Castaña con vaqueros blancos" title="Vaqueros Blancos"/>
-                <div class="Info-producto">
-                    <p class="descripcion">Vaqueros</p>
-                    <p class="precio">79.99 €</p>
-                </div>
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                } 
+            </style>
+            <div class="Info-producto">
+                <p class="descripcion">Vaqueros</p>
+                <p class="precio">79.99 €</p>
+            </div>
         </div>
         <div class="box">
             <img src="/assets/imagenes/image-5.jpg" alt="una descripción de la imagen" title="título de la imagen"/>
-                <div class="Info-producto">
-                    <p class="descripcion">Polo</p>
-                    <p class="precio">44.95 €</p>
-                </div>
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                } 
+            </style>
+            <div class="Info-producto">
+                <p class="descripcion">Polo</p>
+                <p class="precio">44.95 €</p>
+            </div>
         </div>
         <div class="box">
             <img src="/assets/imagenes/image-6.jpg" alt="una descripción de la imagen" title="título de la imagen"/>
-                <div class="Info-producto">
-                    <p class="descripcion">Camisa</p>
-                    <p class="precio">44.99 €</p>
-                </div>
-         </div> 
+            <style>img:hover {
+                transform: scale(1.1);  /*Escala la imagen al 110%*/
+                opacity: 0.8;  /*Reduce la opacidad*/
+                } 
+            </style>
+            <div class="Info-producto">
+                <p class="descripcion">Camisa</p>
+                <p class="precio">44.99 €</p>
+            </div>
+        </div> 
      </div>         
     <footer>
         <div class="container4">
-            <img src="/assets/imagenes/icon-truck.svg">
+            <button class="Circulo-blanco">
+                <img src="/assets/imagenes/icon-truck.svg" alt="Icono-camion">
+            </button>
             <p>Entrega</p>
             <p>Devoluciones y cambios</p>
+        </div>
 
         <div class="container5">
-            <img src="/assets/imagenes/icon-phone.svg">
+            <button class="Circulo-blanco">
+                <img src="/assets/imagenes/icon-phone.svg" alt="Icono-telefono">
+            </button>
             <p>+375 (29) 749-18-23</p>
+        </div>
 
         <div class="container6">
-            <img src="/assets/imagenes/icon-mail.svg">
+            <button class="Circulo-blanco">
+                <img src="/assets/imagenes/icon-mail.svg" alt="Icono-email">
+            </button>
             <p>shop@omix.com</p>
         </div>
     </footer>
