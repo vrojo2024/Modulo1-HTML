@@ -1,138 +1,155 @@
-* { box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
-    /*@font-face {
-        font-family: 'Myfont';
-        src: url('assets\fonts\montserratalternates-bold-webfont.woff') format('woff'); 
-        url('assets\fonts\montserratalternates-bold-webfont.woff2') format('.woff2');
-        font-weight: normal;
-        font-style: normal;*/
-    }
-    /*Aqui voy a definir la paleta de colores que voy a utilizar en la pagina, todas las variables que pongamos aqui estaran disponibles a nivel global*/
-    :root {
-        --primary: #ffffff;
-        --secondary: #212429;
-        --accent: #989899;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+    /*Paleta de colores que voy a utilizar en la pagina, todas las variables que pongamos aqui estaran disponibles a nivel global*/
+:root {
+    --primary: #ffffff;
+    --secondary: #212429;
+    --accent: #989899;
+}
 
 body {
-    font-family:'Myfont' sans-serif; /*Sans-serif será la fuente de respaldo en caso de que mi fuente de error*/
-    color: var(--secondary)
-}
+    font-family:"Montserrat", sans-serif; /*Sans-serif será la fuente de respaldo en caso de que mi fuente de error*/
+    max-width: 1280px; /*limite maximo de ancho para el body*/
+  }
 
-/*Con esto dejo fija la barra de navegación*/
-.fixed-header {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.barra-navegacion {
+  position: fixed; /*Con esto dejo fija la barra de navegación*/
+  padding: 16px;
+  top: 0%; /*para que quede pegado a la parte superior*/ 
+  width: 100%; 
+  height: 72px; /*alto del contenedor de la barra de navegacion*/
+  display:flex; /*los elementos se convierten en elementos flexibles*/
+  color: var(--secondary);/*color de la letra del menu de navegacion*/
+  border-block-end: 1px solid var(--secondary); /*borde bajo barra navegacion*/
+  max-width: 1280px;/*limite maximo de ancho para la barra de navegacion*/
+  font-size: 16px; /*tamaño de la letra de la barra de navegacion*/
+  z-index: 2; /*para que tenga prioridad y se apile enfrente al resto*/
+  background-color: var(--primary); /*color de fondo de la barra de navegacion*/
+  justify-content:space-around;
+    
+}
+  .menu-hamburguesa { 
+    justify-content:center;
+    padding: 20px;
+    width: 10%;   
+    z-index: 1; 
+  }
+  .menu-hamburguesa:hover {
+  transform: scale(1.1);  /*Escala la imagen al 110%*/
+  opacity: 0.8;  /*Reduce la opacidad*/
+  transition: all 0.5s ease;  /*Transición suave para el hover*/
+  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+  }
+
+  .textos-barra-navegacion {
     display: flex;
-    justify-content:center ;
+    align-items: center;
+
+  }  
+  .texto-barra {
+    display: flex;
     padding: 16px;
-    background-color:var(--primary);
-
-}
-/* Estilo para los elementos dentro de .fixed-header */
-.fixed-header span {
-  cursor: pointer;  /*Cambia el cursor al pasar sobre los elementos*/
+  }
+/* Efecto hover cuando el cursor pasa sobre los textos de la barra de navegacion */
+.texto-barra:hover {
+  background-color:var(--accent);  /*Color de fondo para el hover*/
+  color: white;  /*Texto blanco para el hover*/
+  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
   transition: all 0.3s ease;  /*Transición suave para el hover*/
-  padding: 10px;
 }
 
-/* Efecto hover cuando el cursor pasa sobre los <span> dentro de .fixed-header */
-.fixed-header span:hover {
-  background-color:var(--accent);  /* Fondo naranja al hacer hover */
-  color: white;  /* Texto blanco */
-  transform: scale(1.1);  /* Aumenta el tamaño ligeramente */
+.iconos-barra-navegacion {
+  display: flex;
+  justify-content: space-around;
+  width: 20%;
+  }
+.icono-barra {
+  width: 25px;
 }
-/* Estilo del contenido */
-.content {
-  background-color:var(--primary);
-  padding: 64px; /* Espacio suficiente para que el contenido no quede oculto por el header fijo */
-} 
-.inicio {
-margin-left: 16px;;
-}  
+
+.icono-barra:hover {
+  transform: scale(1.1);  /*Escala la imagen al 110%*/
+  opacity: 0.8;  /*Reduce la opacidad*/
+  transition: all 0.5s ease;  /*Transición suave para el hover*/
+  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+}
+
+
+.titulo-pagina {
+  position:relative;
+  padding-top: 100px; /*Me aseguro que no quede oculto detrás del menu fijo*/
+  margin: 50px; 
+}
+
 /*Contenedor de las imagenes*/  
-.container3 {
+.contenedor-tarjetas {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
     gap: 64px;/*espacio entre las cajas*/
     justify-content: center;/*centra las imagenes en la pagina*/
-    padding: 20px;
 }
-  /*Estilo para cada caja de iconos*/
-  .box {
-    background-color:var(--primary); /*Fondo blanco para cada caja*/
-    /*border: 1px solid #ddd; /*he puesto un borde sutil para poder ubicar bien las imagenes */
-    border-radius: 8px; /*Bordes redondeados*/
-    width: 300px; /* Ancho fijo para las imágenes*/
-    text-align:center; /*Para centrar el contenido dentro de cada caja*/
-    padding: 10px;
-  }
-  /* Estilo de las imágenes */
-  .box img {
-    width: 100%; /*Para que la imagen ocupe todo el ancho del contenedor*/
-    height: auto; /*Mantiene la proporción de la imagen*/
-    border: radius 16px; /*Bordes redondeados en las imágenes*/
-  }
 
+.tarjeta {
+    border-radius: 8px;
+}
 
-  /* Estilo para el texto del producto (título y precio) */
-  .info-producto {
-    font-family: 'Myfont', sans-serif;
-    text-align: center;
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
-  }
-  /* Estilo para el precio del producto */
-  .info-producto .precio {
-    font-family: 'Myfont', sans-serif;
-    font-size: 16px;
-    color: var(--secondary);/* Color rojo para el precio */
-    font-weight: bold
-  }
-  header {
+.descripcion {
     display: flex;
-    background-color:var(--primary);
-    padding: 1rem;
-  }
-  header h1 {
-    display:flex;
-    padding-top: 128px; /*Me aseguro que no quede oculto detrás del menu fijo*/
-    margin-left: 64px;
-    font-family: "Myfont", sans-serif;
-  }
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 8px;
+}
+
+
+
+.tarjeta:hover {
+    transform: scale(1.1);  /*Escala la imagen al 110%*/
+    opacity: 0.8;  /*Reduce la opacidad*/
+    transition: all 0.5s ease;  /*Transición suave para el hover*/
+    cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+  } 
+
+
   /*Contenedor principal del footer y alineación de los elementos en horizontal*/
   footer {
-    display: flex;
+    display:flex;
     flex-wrap: wrap;/*Asegura que si no hay suficiente espacio, se ajusten a la siguiente fila*/
-    justify-content: center;/*Centro los contenedores en el footer*/
+    justify-content: space-between;/*los elementos dentro del contenedor se distribuyen a lo largo del eje principal*/
     background-color:var(--secondary); /*color de fondo del footer*/
-    gap: 40px; /*Espaciado entre los contenedores*/
     color:var(--primary); /*color de las letras del footer*/
-    text-align: left;
+    text-align:center;
     padding: 16px;
+  
   
   }
 
   /*Estilo de los contenedores internos de los iconos y texto*/
-  .container4, .container5, .container6 {
-   margin-bottom: 32px; /*Espacio entre los botones*/
+  .boton-camion, .boton-telefono, .boton-mail {
+   margin-bottom: 16px; 
    background-color: var(--secondary);
    display: flex;
-   justify-content: flex-start;
+   justify-content:flex-start ;
    flex-direction:row;
    gap: 1rem;
-   align-items:first baseline;
+   align-items:center;
+
   }
   
+  .devoluciones {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;  /* Alineación correcta en el centro */
+    margin-
+   
+  }
   
   /*Estilo del círculo blanco alrededor del icono*/
   .Circulo-blanco {
   background-color:var(--primary); /*Fondo blanco*/
+  margin-top: 16px;
   border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
   display: inline-block; /*Para que los iconos se alineen en línea*/
   width: 64px; /*Tamaño del ancho del circulo*/
@@ -141,4 +158,51 @@ margin-left: 16px;;
 .Circulo-blanco:hover {
   background-color: var(--accent);
   
+}
+
+
+@media  (max-width: 920px) {
+  .textos-barra-navegacion{
+      display: none;
+  }
+  .iconos-barra-navegacion{
+      display: none;
+  }
+  .menu-hamburguesa{
+      justify-content: center;
+  }  
+  .contenedor-tarjetas{
+     display: grid;
+     grid-template-columns: 1fr;
+     justify-items: center   
+  }  
+  .contenedor-footer{
+      border-bottom:var(--primary) 1px solid;
+      display: flex;
+      justify-content:flex-start;
+      padding: 16px;
+  }
+  footer{
+      display:grid;
+      grid-template-columns: 1fr;
+      justify-items: normal;
+      padding: 16px;
+      font-weight: bold;
+  }
+
+}
+
+@keyframes tienda {
+  0%{
+      width: 100%;
+      height: 100%;
+  }
+  50%{
+      width: 105%;
+      height: 105%;
+  }
+  100%{
+      width: 108%;
+      height: 108%;
+  }
 }
