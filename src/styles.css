@@ -10,88 +10,89 @@
 
 body {
     font-family:"Montserrat", sans-serif; /*Sans-serif será la fuente de respaldo en caso de que mi fuente de error*/
-    max-width: 1280px; /*limite maximo de ancho para el body*/
-  }
+    max-width: 1280px;
+}
 
 .barra-navegacion {
-  position: fixed; /*Con esto dejo fija la barra de navegación*/
-  padding: 16px;
-  top: 0%; /*para que quede pegado a la parte superior*/ 
-  width: 100%; 
-  height: 72px; /*alto del contenedor de la barra de navegacion*/
-  display:flex; /*los elementos se convierten en elementos flexibles*/
-  color: var(--secondary);/*color de la letra del menu de navegacion*/
-  border-block-end: 1px solid var(--secondary); /*borde bajo barra navegacion*/
-  max-width: 1280px;/*limite maximo de ancho para la barra de navegacion*/
-  font-size: 16px; /*tamaño de la letra de la barra de navegacion*/
-  z-index: 2; /*para que tenga prioridad y se apile enfrente al resto*/
-  background-color: var(--primary); /*color de fondo de la barra de navegacion*/
-  justify-content:space-around;
+    position: fixed; /*Con esto dejo fija la barra de navegación*/
+    padding: 16px;
+    top: 0%; /*para que quede pegado a la parte superior*/ 
+    width: 100%; 
+    height: 72px; /*alto del contenedor de la barra de navegacion*/
+    display:flex; /*los elementos se convierten en elementos flexibles*/
+    color: var(--secondary);/*color de la letra del menu de navegacion*/
+    border-block-end: 1px solid var(--secondary); /*borde bajo barra navegacion*/
+    max-width: 1280px;/*limite maximo de ancho para la barra de navegacion*/
+    font-size: 16px; /*tamaño de la letra de la barra de navegacion*/
+    z-index: 2; /*para que tenga prioridad y se apile enfrente al resto*/
+    background-color: var(--primary); /*color de fondo de la barra de navegacion*/
+    justify-content:space-around;
     
 }
   .menu-hamburguesa { 
-    justify-content:center;
+    justify-content:center; 
     padding: 20px;
-    width: 10%;   
-    z-index: 1; 
-  }
+    width: 10%; 
+}
   .menu-hamburguesa:hover {
-  transform: scale(1.1);  /*Escala la imagen al 110%*/
-  opacity: 0.8;  /*Reduce la opacidad*/
-  transition: all 0.5s ease;  /*Transición suave para el hover*/
-  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
-  }
+    transform: scale(1.1);  /*Escala la imagen al 110%*/
+    opacity: 0.8;  /*Reduce la opacidad*/
+    transition: all 0.5s ease;  /*Transición suave para el hover*/
+    cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+}
 
   .textos-barra-navegacion {
     display: flex;
     align-items: center;
 
-  }  
+}  
   .texto-barra {
     display: flex;
     padding: 16px;
-  }
+}
 /* Efecto hover cuando el cursor pasa sobre los textos de la barra de navegacion */
 .texto-barra:hover {
-  background-color:var(--accent);  /*Color de fondo para el hover*/
-  color: white;  /*Texto blanco para el hover*/
-  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
-  transition: all 0.3s ease;  /*Transición suave para el hover*/
+    background-color:var(--accent);  /*Color de fondo para el hover*/
+    color: var(--primary);  /*Texto blanco para el hover*/
+    cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+    transition: all 0.3s ease;  /*Transición suave para el hover*/
 }
 
 .iconos-barra-navegacion {
-  display: flex;
-  justify-content: space-around;
-  width: 20%;
-  }
-.icono-barra {
-  width: 25px;
+    display: flex;
+    justify-content: space-around;
+    width:20%;
+}
+.iconos-barra {
+    width: 25px;
 }
 
-.icono-barra:hover {
-  transform: scale(1.1);  /*Escala la imagen al 110%*/
-  opacity: 0.8;  /*Reduce la opacidad*/
-  transition: all 0.5s ease;  /*Transición suave para el hover*/
-  cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
+.iconos-barra:hover {
+    transform: scale(1.1);  /*Escala la imagen al 110%*/
+    opacity: 0.8;  /*Reduce la opacidad*/
+    transition: all 0.5s ease;  /*Transición suave para el hover*/
+    cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
 }
 
 
 .titulo-pagina {
-  position:relative;
-  padding-top: 100px; /*Me aseguro que no quede oculto detrás del menu fijo*/
-  margin: 50px; 
+    position:relative;
+    padding-top: 100px; /*Me aseguro que no quede oculto detrás del menu fijo*/
+    margin: 50px; 
 }
 
 /*Contenedor de las imagenes*/  
 .contenedor-tarjetas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 64px;/*espacio entre las cajas*/
-    justify-content: center;/*centra las imagenes en la pagina*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 20px;
+    justify-items: center;
 }
 
 .tarjeta {
     border-radius: 8px;
+    overflow: hidden; /*evito que el borde redondeado se vea afectado si hay contenido que sobresale*/
 }
 
 .descripcion {
@@ -108,8 +109,8 @@ body {
     opacity: 0.8;  /*Reduce la opacidad*/
     transition: all 0.5s ease;  /*Transición suave para el hover*/
     cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
-  } 
-
+} 
+ 
 
   /*Contenedor principal del footer y alineación de los elementos en horizontal*/
   footer {
@@ -119,22 +120,23 @@ body {
     background-color:var(--secondary); /*color de fondo del footer*/
     color:var(--primary); /*color de las letras del footer*/
     text-align:center;
-    padding: 16px;
-  
-  
-  }
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-block-end: 16px;
+}
 
   /*Estilo de los contenedores internos de los iconos y texto*/
   .boton-camion, .boton-telefono, .boton-mail {
-   margin-bottom: 16px; 
-   background-color: var(--secondary);
-   display: flex;
-   justify-content:flex-start ;
-   flex-direction:row;
-   gap: 1rem;
-   align-items:center;
-
-  }
+    margin-bottom: 16px; 
+    background-color: var(--secondary);
+    display: flex;
+    justify-content:flex-start ;
+    flex-direction:row;
+    gap: 1rem; /*Distancia entre los items*/
+    align-items:center;
+    font-size: 16px;
+}
   
   .devoluciones {
     background-color: var(--secondary);
@@ -142,44 +144,45 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;  /* Alineación correcta en el centro */
-    margin-
-   
-  }
+    margin-top: 16px;
+    font-size: 16px; 
+}
   
   /*Estilo del círculo blanco alrededor del icono*/
   .Circulo-blanco {
-  background-color:var(--primary); /*Fondo blanco*/
-  margin-top: 16px;
-  border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
-  display: inline-block; /*Para que los iconos se alineen en línea*/
-  width: 64px; /*Tamaño del ancho del circulo*/
-  height: 64px; /*Tamaño del alto del círculo*/
+    background-color:var(--primary); /*Fondo blanco*/
+    margin-top: 16px;
+    border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
+    display: inline-block; /*Para que los iconos se alineen en línea*/
+    width: 64px; /*Tamaño del ancho del circulo*/
+    height: 64px; /*Tamaño del alto del círculo*/
 }
 .Circulo-blanco:hover {
-  background-color: var(--accent);
-  
+    background-color: var(--accent);
+    
 }
 
+/*barra de navegación y el pie de página que se adapta a la pantalla, calculado para un ancho máximo de 920px.*/
 
 @media  (max-width: 920px) {
   .textos-barra-navegacion{
-      display: none;
+      display: none; /*que no aparezca*/
   }
   .iconos-barra-navegacion{
-      display: none;
+      display: none; /*que no aparezca*/
   }
   .menu-hamburguesa{
       justify-content: center;
   }  
   .contenedor-tarjetas{
-     display: grid;
-     grid-template-columns: 1fr;
-     justify-items: center   
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center   
   }  
   .contenedor-footer{
-      border-bottom:var(--primary) 1px solid;
+      border-bottom:var(--primary) 1px solid; /*linea al pie de cada elemento*/
       display: flex;
-      justify-content:flex-start;
+      justify-content:flex-start;/*Para que no haya espacio adicional entre los elementos, y todo se alinee en el principio del eje.*/
       padding: 16px;
   }
   footer{
@@ -188,21 +191,5 @@ body {
       justify-items: normal;
       padding: 16px;
       font-weight: bold;
-  }
-
-}
-
-@keyframes tienda {
-  0%{
-      width: 100%;
-      height: 100%;
-  }
-  50%{
-      width: 105%;
-      height: 105%;
-  }
-  100%{
-      width: 108%;
-      height: 108%;
   }
 }
