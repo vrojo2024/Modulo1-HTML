@@ -10,7 +10,6 @@
 
 body {
     font-family:"Montserrat", sans-serif; /*Sans-serif será la fuente de respaldo en caso de que mi fuente de error*/
-    max-width: 1280px;
 }
 
 .barra-navegacion {
@@ -22,7 +21,6 @@ body {
     display:flex; /*los elementos se convierten en elementos flexibles*/
     color: var(--secondary);/*color de la letra del menu de navegacion*/
     border-block-end: 1px solid var(--secondary); /*borde bajo barra navegacion*/
-    max-width: 1280px;/*limite maximo de ancho para la barra de navegacion*/
     font-size: 16px; /*tamaño de la letra de la barra de navegacion*/
     z-index: 2; /*para que tenga prioridad y se apile enfrente al resto*/
     background-color: var(--primary); /*color de fondo de la barra de navegacion*/
@@ -83,6 +81,7 @@ body {
 
 /*Contenedor de las imagenes*/  
 .contenedor-tarjetas {
+    max-width: 1280px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -111,7 +110,14 @@ body {
     cursor: pointer;  /*Cambio el cursor al pasar sobre los elementos*/
 } 
  
+.contenedor-footer {
+    display: flex;
+    align-items: center;
+    justify-content:space-between
+   
+  
 
+}
   /*Contenedor principal del footer y alineación de los elementos en horizontal*/
   footer {
     display:flex;
@@ -120,10 +126,9 @@ body {
     background-color:var(--secondary); /*color de fondo del footer*/
     color:var(--primary); /*color de las letras del footer*/
     text-align:center;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-block-end: 16px;
+    width: 100%;
+    
+   
 }
 
   /*Estilo de los contenedores internos de los iconos y texto*/
@@ -144,7 +149,7 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;  /* Alineación correcta en el centro */
-    margin-top: 16px;
+    margin: 16px;
     font-size: 16px; 
 }
   
@@ -153,7 +158,6 @@ body {
     background-color:var(--primary); /*Fondo blanco*/
     margin-top: 16px;
     border-radius: 50%; /*redondeo las esquinas para que quede un circulo*/
-    display: inline-block; /*Para que los iconos se alineen en línea*/
     width: 64px; /*Tamaño del ancho del circulo*/
     height: 64px; /*Tamaño del alto del círculo*/
 }
